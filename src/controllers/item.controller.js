@@ -41,14 +41,18 @@ module.exports = {
             const {
                 id
             } = req.params;
+            console.log(id);
             var list = new List();
             list = await List.findOne({
                 _id: id
             }).exec();
+            console.log(list);
+            console.log(req.body);
             const item = await Item.create(req.body);
+            console.log(item);
             list.items.push(item);
             await list.save();
-            return res.status(httpStatus.OK).json(list);
+            return res.status(httpStatus.OK).json(item);
         } catch (err) {
             next(err);
         }
