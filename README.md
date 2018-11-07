@@ -4,6 +4,11 @@
 ```
 yarn install
 ```
+### Download and install MongoDB from their website
+```
+https://www.mongodb.com/download-center?jmp=nav
+```
+
 
 ### Compiles and hot-reloads for development
 ```
